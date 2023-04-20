@@ -22,4 +22,22 @@ export class CourseCardComponent {
 
     this.courseEmitted.emit(this.course);
   }
+
+  isImageVisible() {
+    return this.course && this.course.iconUrl;
+  }
+
+  onClass() {
+    if (this.course.category === "BEGINNER") {
+      return "beginner";
+    }
+
+    if (this.course.category === "ADVANCED") {
+      return "advanced";
+    }
+
+    if (this.course.category === "INTERMEDIATE") {
+      return "intermediate";
+    }
+  }
 }
