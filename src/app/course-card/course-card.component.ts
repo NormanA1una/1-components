@@ -11,12 +11,15 @@ export class CourseCardComponent {
   @Input()
   course: Course;
 
-  @Output()
-  courseSelected = new EventEmitter<Course>();
+  @Input()
+  cardIndex: number;
+
+  @Output("courseSelected")
+  courseEmitted = new EventEmitter<Course>();
 
   onCourseViewed() {
     console.log("card component - button clicked ...");
 
-    this.courseSelected.emit(this.course);
+    this.courseEmitted.emit(this.course);
   }
 }

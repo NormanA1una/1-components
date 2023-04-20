@@ -6,8 +6,15 @@
 </div>
 
 <course-card
+  *ngFor="
+    let course of courses;
+    index as i;
+    first as isFirst;
+    last as isLast;
+    even as isEven;
+    odd as isOdd
+  "
   (courseSelected)="onCourseSelected($event)"
-  [course]="coreCourse"
+  [course]="course"
+  [cardIndex]="i + 1"
 ></course-card>
-<course-card [course]="rxjsCourse"></course-card>
-<course-card [course]="ngrxCourse"></course-card>
