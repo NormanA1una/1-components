@@ -9,6 +9,13 @@ import { Course } from "./model/course";
 })
 export class AppComponent {
   courses = COURSES;
+  title = COURSES[0].description;
+
+  startDate = new Date(2000, 1, 27);
+
+  price = 9.99465486585;
+
+  rate = 0.67;
 
   onCourseSelected(course: Course) {
     console.log("app component - button clicked ...", course);

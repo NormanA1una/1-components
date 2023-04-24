@@ -5,6 +5,16 @@
   />
 </div>
 
+<div class="demo">
+  <!-- <div>Start Date: {{ startDate | date : "dd/MMM/yyyy" }}</div> -->
+
+  <!-- <div>{{ title | titlecase }}</div> -->
+
+  <!-- <div>{{ price | currency : "EUR" }}</div> -->
+
+  <!-- <div>Percentage: {{ rate | percent }}</div> -->
+</div>
+
 <course-card
   *ngFor="let course of courses; index as i"
   (courseSelected)="onCourseSelected($event)"
