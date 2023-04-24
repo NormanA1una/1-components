@@ -1,6 +1,8 @@
 <div class="courses">
   <div class="course-card" *ngIf="course" [ngClass]="onClass()">
-    <div class="course-title">{{ cardIndex + " " + course.description }}</div>
+    <div class="course-title" [ngStyle]="cardStyles()">
+      {{ cardIndex + " " + course.description }}
+    </div>
     <img
       width="300"
       alt="Angular Logo"

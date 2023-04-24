@@ -40,4 +40,18 @@ export class CourseCardComponent {
       return "intermediate";
     }
   }
+
+  cardStyles() {
+    if (this.course.category === "BEGINNER") {
+      return { color: "crimson" };
+    }
+
+    if (this.course.category === "ADVANCED") {
+      return { color: "blue" };
+    }
+
+    if (this.course.category === "INTERMEDIATE") {
+      return { color: "green" };
+    }
+  }
 }
